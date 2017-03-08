@@ -187,3 +187,22 @@ ul {
     width: 5em;
     padding: 10px;
 }
+
+.centerTopHeader {
+    width: 12em;
+    margin-left: -1.7em;
+    margin-top: -1.7em;
+}
+
+.blueSpan {
+    width: 17.5em;
+    border: 1px solid blue;
+    text-align: center;
+    color: white;
+    background-color: blue;
+}
+
+#container{width:100%;}
+#left{float:left;width:100px;}
+#right{float:right;width:100px;}
+#center{margin:0 auto;width:100px;}

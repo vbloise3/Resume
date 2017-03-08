@@ -79,8 +79,8 @@ export class Material2AppAppComponent {
 
 @Component({
     template: `
-    <div class="centerIt">
-        <h3 style="width: 7em;margin-left: -1em;">Contact me:</h3>
+    <div id="container" class="centerIt">
+        <div id="left"><h3 class="centerTopHeader blueSpan">My Contact Info</h3></div>
     </div>
     <table>
         <tr>
