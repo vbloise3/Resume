@@ -89,7 +89,7 @@ export class Material2AppAppComponent {
         </tr>
     </table>
     <div class="centerIt2">
-        <button md-raised-button (click)="dialogRef.close('done')">Done</button>
+        <button md-raised-button md-autofocus (click)="dialogRef.close('done')">Done</button>
     </div>
   `,
 })
