@@ -79,9 +79,12 @@ export class Material2AppAppComponent {
 
 @Component({
     template: `
-    <div id="container" class="centerIt">
-        <div id="left"><h3 class="centerTopHeader blueSpan">My Contact Info</h3></div>
-    </div>
+    <!--div id="container" class="centerIt"-->
+        <md-toolbar color="primary" style="height: 0.25em; width: 114%; margin-left: -1em; margin-top: -1em;">            
+            <img class="mdCardSmallDialogImg" src="app/app.component/VinceBloiseTransparent.png">
+            <span id="center" class="textBottom largeFont" style="width: 50%; margin-left: -1em;">&nbsp;My Contact Info</span>            
+        </md-toolbar>
+    <!--/div-->
     <table>
         <tr>
           <td><a href="mailto:vbloise3@gmail.com?Subject=Resume" style="color: blue;"><i class="material-icons md-18 iconBottom">email</i>vbloise3@gmail.com</a></td>
