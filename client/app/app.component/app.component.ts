@@ -2,13 +2,14 @@
  * Created by vincebloise on 1/25/17.
  */
 import {Component, Optional, ViewEncapsulation} from '@angular/core';
-import {MdDialog, MdDialogRef, MdSnackBar} from '@angular/material';
+import {MdDialog, MdDialogRef, MdSnackBar, MdSidenav} from '@angular/material';
 import { Http, HttpModule} from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/empty';
 import { Observable} from "rxjs/Observable";
 import { ActivatedRoute } from '@angular/router';
+import { Router, Routes, RouterModule } from '@angular/router';
 
 @Component({
     selector: 'material2-app-app',
@@ -26,6 +27,7 @@ export class Material2AppAppComponent {
     productId: Number;
     randomness: Number;
     selected = '';
+    currentPath = '';
 
     getRandomNumber(): number {
         return Math.random();
@@ -44,7 +46,7 @@ export class Material2AppAppComponent {
 
     progress: number = 0;
 
-    constructor(private _dialog: MdDialog, private _snackbar: MdSnackBar, private http: Http, route: ActivatedRoute) {
+    constructor(private _dialog: MdDialog, /*private _mdsidenav: MdSidenav,*/ private _snackbar: MdSnackBar, private http: Http, route: ActivatedRoute, private _router: Router ) {
         this.products = this.http.get('/products')
             .map(res => res.json())
             .catch( err => {
@@ -53,10 +55,18 @@ export class Material2AppAppComponent {
             });
         this.productId = route.snapshot.params['id'];
         this.randomness = this.getRandomNumber();
+        this.currentPath = this._router.url;
         // Update the value for the progress-bar on an interval.
         setInterval(() => {
             this.progress = (this.progress + Math.floor(Math.random() * 4) + 1) % 100;
         }, 200);
+    }
+
+    getCurrentPath() {
+        if (this.currentPath === '/')
+            return true;
+        else
+            return false;
     }
 
     openDialog() {
@@ -73,6 +83,11 @@ export class Material2AppAppComponent {
 
     sendEmail() {
         window.open('mailto:' + this.myEmail + '?subject=Resume&body=Contacting you about your resume.', '_blank', 'toolbar=no,status=no,menubar=no,scrollbars=no,resizable=no,left=100000, top=100000, width=1, height=1, visible=none');
+    }
+
+    navigateToHome() {
+        this._router.navigate(["/"]);
+        //this._mdsidenav.close();
     }
 }
 

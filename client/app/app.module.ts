@@ -12,7 +12,7 @@ import { YoMoFoComponent } from './yo-mo-fo/yo-mo-fo';
 import AppComponent from './appComponent/appComponent';
 import HomeComponent from './home/home';
 import { routing } from './app.routing';
-import { MaterialModule } from '@angular/material';
+import { MaterialModule, MdSidenav } from '@angular/material';
 import 'node_modules/hammerjs/hammer.js';
 import {Material2AppAppComponent, DialogContent} from './app.component/app.component';
 
