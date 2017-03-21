@@ -11,6 +11,7 @@ import 'rxjs/add/operator/map';
 import { YoMoFoComponent } from './yo-mo-fo/yo-mo-fo';
 import AppComponent from './appComponent/appComponent';
 import HomeComponent from './home/home';
+import {PersonalInterestsComponent, DialogContent2} from './personalInterests.component/personalInterests.component';
 import { routing } from './app.routing';
 import { MaterialModule, MdSidenav } from '@angular/material';
 import 'node_modules/hammerjs/hammer.js';
@@ -20,8 +21,8 @@ import {Material2AppAppComponent, DialogContent} from './app.component/app.compo
 @NgModule({
     imports:      [ BrowserModule, ReactiveFormsModule,
         HttpModule, routing, MaterialModule.forRoot()],
-    declarations: [ AppComponent, HomeComponent, YoMoFoComponent, Material2AppAppComponent, DialogContent],
-    entryComponents: [DialogContent],
+    declarations: [ AppComponent, HomeComponent, YoMoFoComponent, Material2AppAppComponent, DialogContent, PersonalInterestsComponent, DialogContent2],
+    entryComponents: [DialogContent, DialogContent2],
     providers:    [
         {provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap:    [ AppComponent ]
