@@ -2,7 +2,7 @@
  * Created by vincebloise on 1/25/17.
  */
 import {Component, Optional, ViewEncapsulation} from '@angular/core';
-import {MdDialog, MdDialogRef, MdSnackBar, MdSidenav} from '@angular/material';
+import {MdDialog, MdDialogRef, MdSnackBar} from '@angular/material';
 import { Http, HttpModule} from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';

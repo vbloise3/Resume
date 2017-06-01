@@ -1,6 +1,7 @@
-<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
+<md-sidenav-container [class.m2app-dark]="isDarkTheme">
 
-    <md-sidenav #sidenav mode="side" class="app-sidenav">
+
+    <md-sidenav #sidenav mode="side" class="app-sidenav mat-elevation-z15" style="border-right-style: none;">
         <table>
             <tr>
                 <div *ngIf="_router.url == '/'"><td><span class="smallTextBottom"><a [routerLink]="['/1']" target="_top" style="color: blue"><i class="material-icons md-18 iconBottom">description</i>My Resume</a></span></td></div>
@@ -12,6 +13,7 @@
             </tr>
         </table>
     </md-sidenav>
+
 
     <md-toolbar color="primary" style="height: 4em;">
         <button class="app-icon-button" (click)="sidenav.toggle()">
@@ -57,7 +59,12 @@
                 <h2 class="h1Italics"><i class="material-icons md-18 iconPositionHeader">work</i>Senior Manager, Software Development</h2>
                 <ul>
                         <li class="bullet11">
-                        Currently manager responsible for implementing Behavior Driven/Acceptance Test Driven Development across my entire IT subdivision.
+                            Currently managing Vanguard's Fund Accounting team that supports the Fund Financial Services business unit. I have responsibility
+                            for the systems that support the Accounting Book of Record (ABOR), the Investment Book of Record (IBOR), and the
+                            Institutional Product Accounting (IPA) company stock purchase functions.
+                        </li>
+                        <li class="bullet11">
+                        Manager responsible for implementing Behavior Driven/Acceptance Test Driven Development across my entire IT subdivision.
                         In this position I have the responsibility to transform the entire development process from requirements elicitation to continuous delivery.
                         </li>
                     <li class="bullet11">
@@ -260,7 +267,7 @@
 
     </div>
 
-</md-sidenav-layout>
+</md-sidenav-container>
 
 <span class="app-action" [class.m2app-dark]="isDarkTheme">
   <button md-fab style="background-color:#ffcc00;" (click)="openDialog()"><md-icon class="material-icons md-18 iconWhite">mail outline</md-icon></button>

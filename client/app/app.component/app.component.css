@@ -1,4 +1,4 @@
-md-sidenav-layout.m2app-dark {
+md-sidenav-container.m2app-dark {
     background: black;
 }
 
@@ -13,6 +13,7 @@ md-sidenav-layout.m2app-dark {
 .app-sidenav {
     padding: 10px;
     min-width: 100px;
+    border-right-style: inset;
 }
 
 .app-content md-checkbox {
