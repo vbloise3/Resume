@@ -41,7 +41,8 @@ System.config({
     },
     packages: {
         'app'                              : {main: 'main', defaultExtension: 'ts'},
-        'rxjs'                             : {main: 'Rx'}
+        'rxjs'                             : {main: 'Rx'},
+        '@angular/cdk'                      : {main: 'bundles/cdk.umd.js'}
         //'@angular/core'                    : {main: 'core.umd.min.js'},
         //'@angular/common'                  : {main: 'common.umd.min.js'},
         //'@angular/compiler'                : {main: 'compiler.umd.min.js'},
