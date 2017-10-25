@@ -1,4 +1,10 @@
 # Created by .ignore support plugin (hsz.mobi)
-build
+.gitignore
+.idea/inspectionProfiles/
+.idea/workspace.xml
 node_modules/
+build
 *.zip
+.git/*
+.DS_Store
+ziUi7EUa
